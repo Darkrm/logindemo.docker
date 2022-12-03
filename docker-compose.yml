@@ -8,6 +8,8 @@ services :
     postgres :
         image : postgres:alpine
         restart : always
+        environment:
+            POSTGRES_PASSWORD: test
         networks :
             - backend
     api :
